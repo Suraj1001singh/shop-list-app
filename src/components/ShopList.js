@@ -27,7 +27,7 @@ const ShopList = () => {
   //Fetching shops from server
   useEffect(() => {
     dispatch(action.fetchShopsData());
-  });
+  }, []);
 
   //Initialising filters state
   useEffect(() => {
