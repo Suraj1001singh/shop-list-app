@@ -27,7 +27,7 @@ const ShopList = () => {
   //Fetching shops from server
   useEffect(() => {
     dispatch(action.fetchShopsData());
-  }, []);
+  });
 
   //Initialising filters state
   useEffect(() => {
@@ -43,7 +43,7 @@ const ShopList = () => {
       categoryObj[categories[i]] = false;
     }
     setCategoryState(categoryObj);
-  }, []);
+  }, [areas, categories]);
 
   //function to filter shops
   const filterration = () => {
